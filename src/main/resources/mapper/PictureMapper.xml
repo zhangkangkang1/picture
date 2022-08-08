@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.picture.dao.PictureDao">
+
+    <resultMap id="BaseResultMap" type="com.picture.entity.PicturePO">
+        <id column="picture_id" property="pictureId" jdbcType="BIGINT"/>
+        <result column="picture_name" property="pictureName" jdbcType="VARCHAR"/>
+        <result column="picture_base64" property="pictureBase64" jdbcType="BLOB"/>
+        <result column="picture_remark" property="pictureRemark" jdbcType="VARCHAR"/>
+        <result column="picture_path" property="picturePath" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="DATE"/>
+        <result column="theme_id" property="themeId" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select *  from picture
+    </select>
+    <select id="selectPictureById" resultMap="BaseResultMap">
+        select *  from picture where picture_id = #{id}
+    </select>
+</mapper>

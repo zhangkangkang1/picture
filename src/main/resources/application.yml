@@ -1,0 +1,32 @@
+server:
+  port: 521
+
+spring:
+#  application:
+                                    #    name: seata-account-service
+                                    #  cloud:
+                                    #    alibaba:
+                                    #      seata:
+                                    #        # 自定义事务组名称需要与seata-server中的对应
+                                    #        tx-service-group: fsp_tx_group
+                                    #    nacos:
+                                    #      discovery: #Nacos注册中心地址
+                                    #        server-addr: localhost:8848
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://180.76.56.226:3306/picture?characterEncoding=utf8
+    username: game
+    password: uu5!^%jg
+#    type: com.alibaba.druid.pool.DruidDataSource
+#feign:
+#  hystrix:
+#    enabled: false
+
+logging:
+  level:
+    io:
+      seata: info
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  #所有entity别名类所在包
+  type-aliases-package: com.picture.entities
