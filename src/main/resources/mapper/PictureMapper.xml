@@ -20,4 +20,18 @@
     <select id="selectPictureById" resultMap="BaseResultMap">
         select *  from picture where picture_id = #{id}
     </select>
+    <insert id="addPicture">
+        insert into picture (picture_id,
+                             picture_name,
+                             picture_base64,
+                             picture_remark,
+                             create_date,
+                             theme_id)
+        values (#{pictureId},
+                #{pictureName},
+                #{pictureBase64},
+                #{pictureRemark},
+                now(),
+                #{themeId})
+    </insert>
 </mapper>

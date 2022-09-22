@@ -6,7 +6,7 @@ import java.util.Date;
 @Data
 public class PicturePO {
 
-    private Integer pictureId;
+    private Long pictureId;
 
     private String pictureName;
 
@@ -19,5 +19,7 @@ public class PicturePO {
     private Date createDate;
 
     private Integer themeId;
+
+
 
 }
