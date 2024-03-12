@@ -1,6 +1,12 @@
 server:
   port: 521
 
+
+#  spring.application.name=cloud-producer-server
+#  # nacos 配置中心地址
+#  spring.cloud.nacos.config.server-addr=localhost:8848
+#  # 配置文件的类型
+#  spring.cloud.nacos.config.file-extension=yaml
 spring:
 #  application:
                                     #    name: seata-account-service
@@ -23,10 +29,13 @@ spring:
 #    enabled: false
 
 logging:
+
+
   level:
     io:
       seata: info
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   #所有entity别名类所在包
-  type-aliases-package: com.picture.entities
+  type-aliases-package: com.picture.entity
+
